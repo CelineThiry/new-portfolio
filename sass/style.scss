@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+	2. Header / #header
+		2.1. Navigation / #navbar
+	3. Content / #content
+		3.1. Left column / #leftcolumn
+		3.2. Right column / #rightcolumn
+		3.3. Sidebar / #sidebar
+			3.3.1. RSS / #rss
+	4. Footer / #footer
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Color codes]
+
+Background:	#ffffff (white)
+Content:	#1e1e1e (light black)
+Header h1:	#9caa3b (green)
+Header h2:	#ee4117 (red)
+Footer:		#b5cede (dark black)
+
+a (standard):	#0040b6 (dark blue)
+a (visited):	#5999de (light blue)
+a (active):	#cc0000 (pink)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy:		1.2em/1.6em Verdana, Helvetica, Arial, Geneva, sans-serif;
+Headers:		2.7em/1.3em Helvetica, Arial, "Lucida Sans Unicode", Verdana, sans-serif;
+Input, textarea:	1.1em Helvetica, Verdana, Geneva, Arial, sans-serif;
+Sidebar heading:	1.5em Helvetica, Trebuchet MS, Arial, sans-serif;
+
+Notes:	decreasing heading by 0.4em with every subsequent heading level
+-------------------------------------------------------------------*/
+
+/* master.css */
+@import url("reset.css");
+
+
+/* 1. Body */
