@@ -16,23 +16,29 @@
 [Color codes]
 
 Background:	#ffffff (white)
-Content:	#1e1e1e (light black)
-Header h1:	#9caa3b (green)
-Header h2:	#ee4117 (red)
-Footer:		#b5cede (dark black)
+Color Block 1:	#F8A494 (Light coral)
+Color Block 2:	#64BBBB (Turquoise)
+Color Block 3:	#FFCF8B (Light Orange)
+Dark type color: #4A4A4A (dark black)
 
-a (standard):	#0040b6 (dark blue)
-a (visited):	#5999de (light blue)
-a (active):	#cc0000 (pink)
+a (standard):	#4A4A4A (dark black)
+a (visited):	#4A4A4A (dark black)
+a (active):		#9B9B9B (grey)
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 [Typography]
 
-Body copy:		1.2em/1.6em Verdana, Helvetica, Arial, Geneva, sans-serif;
-Headers:		2.7em/1.3em Helvetica, Arial, "Lucida Sans Unicode", Verdana, sans-serif;
-Input, textarea:	1.1em Helvetica, Verdana, Geneva, Arial, sans-serif;
-Sidebar heading:	1.5em Helvetica, Trebuchet MS, Arial, sans-serif;
+
+h1:									Merriweather, italic, 36px, 45px
+H2(Courses, position, main bold): 	Lato, Bold, 18px, 22px, UPPERCASE
+.links:								Lato, Regular, 14px, 17px, underlined
+.main-paragraph:					Lato, Regular, 14px, 17px
+.excerpt p:							Merriweather, italic, 20px, 25px
+Company/School p: 					Lato, light, 18px, 22px, UPPERCASE
+Description p : 					Merriweather, light italic, 14px, 18px;
+.tag p: 							Lato, light, 12px, 15px
+
 
 Notes:	decreasing heading by 0.4em with every subsequent heading level
 -------------------------------------------------------------------*/
