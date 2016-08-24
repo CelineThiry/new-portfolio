@@ -30,21 +30,71 @@ a (active):		#9B9B9B (grey)
 [Typography]
 
 
-h1:									Merriweather, italic, 36px, 45px
-H2(Courses, position, main bold): 	Lato, Bold, 18px, 22px, UPPERCASE
-.links:								Lato, Regular, 14px, 17px, underlined
-.main-paragraph:					Lato, Regular, 14px, 17px
-.excerpt p:							Merriweather, italic, 20px, 25px
-Company/School p: 					Lato, light, 18px, 22px, UPPERCASE
-Description p : 					Merriweather, light italic, 14px, 18px;
-.tag p: 							Lato, light, 12px, 15px
+h1:									Merriweather, 400i, 36px, 45px
+H2(Courses, position, main bold): 	Lato, 400, Bold, 18px, 22px, UPPERCASE
+.links:								Lato, 400, 14px, 17px, underlined
+.main-paragraph:					Lato, 400, 14px, 17px
+.excerpt p:							Merriweather, 400i, 20px, 25px
+Company/School p: 					Lato, 300, 18px, 22px, UPPERCASE
+Description p : 					Merriweather, 300i, 14px, 18px;
+.tag p: 							Lato, 300, 12px, 15px
 
 
 Notes:	decreasing heading by 0.4em with every subsequent heading level
 -------------------------------------------------------------------*/
 
 /* master.css */
-@import url("reset.css");
+@import 'reset';
+@import 'normalize';
 
+$bk-color: #ffffff; /* (white) */
+$color-block-1: #F8A494; /* (Lightcoral) */
+$color-block-2: #64BBBB; /* (Turquoise) */
+$color-block-3: #FFCF8B; /* (Light Orange) */
+$dark-color: #4A4A4A; /* (dark black) */
+
+$serif: "Merriweather", serif;
+$sans-serif: "Lato", sans-serif;
 
 /* 1. Body */
+
+.body-container{
+	display: block;
+	margin: 3vw;
+	background-color: #E1E1E1;
+}
+
+/* Font style */
+
+@mixin paragraph-style($font-family, $font-size, $font-color, $line-height, $font-weight, $italic, $font-decoration, $uppercase) {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $font-color;
+	line-height: $line-height;
+	font-weight: $font-weight;
+	font-style: $italic;
+	text-decoration: $font-decoration;
+	text-transform: $uppercase;
+}
+
+h1 { @include paragraph-style($serif, 36px, $dark-color, 45px, 400, italic, none, none); }
+h2 { @include paragraph-style($sans-serif, 18px, $dark-color, 22px, bold, normal, none, uppercase); }
+.links { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, underline, none); }
+p { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
+.excerpt { @include paragraph-style($serif, 20px, $dark-color, 25px, 400, italic, none, none); }
+
+
+/* header */
+
+#logo-celine{
+	width:25px;
+	height: 25px;
+}
+
+.header__navigation__list__item{
+	display: inline;
+}
+
+
+
+
