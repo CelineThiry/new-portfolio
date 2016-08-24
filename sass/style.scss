@@ -61,7 +61,7 @@ $central-block-width: 90vw;
 $general-padding: 0px;
 
 
-/* Font style */
+/* Typeface style */
 
 @mixin paragraph-style($font-family, $font-size, $font-color, $line-height, $font-weight, $italic, $font-decoration, $uppercase) {
 	font-family: $font-family;
@@ -78,7 +78,7 @@ h1 { @include paragraph-style($serif, 36px, $dark-color, 45px, 400, italic, none
 h2 { @include paragraph-style($sans-serif, 18px, $dark-color, 22px, bold, normal, none, uppercase); }
 .links { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
 .links:hover{text-decoration: underline;}
-p { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
+p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
 .excerpt { @include paragraph-style($serif, 20px, $dark-color, 25px, 400, italic, none, none); }
 .tag { @include paragraph-style($sans-serif, 12px, $dark-color, 15px, 300, normal, none, none); }
 
@@ -202,6 +202,47 @@ p { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, 
 	font-family: $sans-serif;
 
 }
+
+.large-block{
+	background-color: $color-block-2;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.large-block__button{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a{
+    	margin-bottom: 10px;
+    }
+}
+
+
+/* footer */
+.footer__right__list{
+	text-align: right;
+}
+
+.footer__right__list__item{
+	display: inline;
+
+	svg{
+		height: 50px;
+		width: 50px;
+	}
+}
+
+footer.row{
+	justify-content: center;
+    align-items: center;
+    // background-color: $color-block-1;
+    // padding: 20px;
+    // height: 50vh;
+}
+
 
 
 

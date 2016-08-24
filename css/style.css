@@ -433,7 +433,7 @@ textarea {
 /* (Turquoise) */
 /* (Light Orange) */
 /* (dark black) */
-/* Font style */
+/* Typeface style */
 h1 {
   font-family: "Merriweather", serif;
   font-size: 36px;
@@ -467,7 +467,7 @@ h2 {
 .links:hover {
   text-decoration: underline; }
 
-p {
+p, a {
   font-family: "Lato", sans-serif;
   font-size: 14px;
   color: #4A4A4A;
@@ -588,5 +588,33 @@ p {
   font-size: 40px;
   font-weight: 300;
   font-family: "Lato", sans-serif; }
+
+.large-block {
+  background-color: #64BBBB;
+  padding: 20px;
+  cursor: pointer; }
+
+.large-block__button {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .large-block__button a {
+    margin-bottom: 10px; }
+
+/* footer */
+.footer__right__list {
+  text-align: right; }
+
+.footer__right__list__item {
+  display: inline; }
+  .footer__right__list__item svg {
+    height: 50px;
+    width: 50px; }
+
+footer.row {
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
