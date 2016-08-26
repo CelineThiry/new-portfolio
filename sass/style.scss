@@ -125,14 +125,19 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 /* main */
 .main__intro-block{
 	background-color: $color-block-1;
+	display: flex;
+	justify-content: left;
+	align-items: flex-end;
 }
 .main__intro-block__right.column{
 	padding: 0 0 0 20px;
 }
 
-.excerpt{
-	margin: 15vw 0 0 0;
+.main__intro-block__right{
+	align-self: flex-end;
+
 }
+
 
 .row{
 	// border: 1px solid #000;
@@ -147,7 +152,7 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 	// border: 1px solid #000;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: flex-start;
 	padding: 20px;
 }
@@ -203,19 +208,21 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 
 }
 
-.large-block{
+.button-block{
 	background-color: $color-block-2;
 	padding: 20px;
 	cursor: pointer;
-}
-
-.large-block__button{
-	text-align: center;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.large-block__button{
+	text-align: center;	
     a{
+    	display: block;
     	margin-bottom: 10px;
     }
 }
@@ -237,11 +244,20 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 
 footer.row{
 	justify-content: center;
-    align-items: center;
-    // background-color: $color-block-1;
-    // padding: 20px;
+    align-items: flex-start;
+    background-color: $color-block-1;
+    padding: 20px;
     // height: 50vh;
+    .tag{
+		margin-top: 20%;
+		margin-bottom: 0;
+    }
+    h2{
+    	margin-top: 0;
+    }
 }
+
+
 
 
 

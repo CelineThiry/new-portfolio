@@ -529,13 +529,16 @@ p, a {
 
 /* main */
 .main__intro-block {
-  background-color: #F8A494; }
+  background-color: #F8A494;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end; }
 
 .main__intro-block__right.column {
   padding: 0 0 0 20px; }
 
-.excerpt {
-  margin: 15vw 0 0 0; }
+.main__intro-block__right {
+  align-self: flex-end; }
 
 .row {
   width: 100%;
@@ -547,7 +550,7 @@ p, a {
 .row--padding {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   padding: 20px; }
 
@@ -589,18 +592,19 @@ p, a {
   font-weight: 300;
   font-family: "Lato", sans-serif; }
 
-.large-block {
+.button-block {
   background-color: #64BBBB;
   padding: 20px;
-  cursor: pointer; }
-
-.large-block__button {
-  text-align: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.large-block__button {
+  text-align: center; }
   .large-block__button a {
+    display: block;
     margin-bottom: 10px; }
 
 /* footer */
@@ -615,6 +619,13 @@ p, a {
 
 footer.row {
   justify-content: center;
-  align-items: center; }
+  align-items: flex-start;
+  background-color: #F8A494;
+  padding: 20px; }
+  footer.row .tag {
+    margin-top: 20%;
+    margin-bottom: 0; }
+  footer.row h2 {
+    margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */
