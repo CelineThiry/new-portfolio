@@ -1,0 +1,24 @@
+@media screen and (max-width: 550px){
+	.row{
+		flex-wrap: wrap;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	div.main__intro-block__right.column {
+    padding: 0px;
+	}
+	.small-12{
+		width: 100%;
+	}
+
+
+}
+
+@media screen and (min-width: 800px) {
+	
+	.large-6{
+		width: 50%;
+	}
+}

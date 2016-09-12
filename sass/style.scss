@@ -46,6 +46,8 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
 /* master.css */
 @import 'reset';
 @import 'normalize';
+@import 'mediaqueries';
+
 
 $bk-color: #ffffff; /* (white) */
 $color-block-1: #F8A494; /* (Lightcoral) */
@@ -74,13 +76,13 @@ $general-padding: 0px;
 	text-transform: $uppercase;
 }
 
-h1 { @include paragraph-style($serif, 36px, $dark-color, 45px, 400, italic, none, none); }
-h2 { @include paragraph-style($sans-serif, 18px, $dark-color, 22px, bold, normal, none, uppercase); }
+h1 { @include paragraph-style($serif, 36px, $bk-color, 45px, 400, italic, none, none); }
+h2 { @include paragraph-style($sans-serif, 18px, $bk-color, 22px, bold, normal, none, uppercase); }
 .links { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
 .links:hover{text-decoration: underline;}
-p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
-.excerpt { @include paragraph-style($serif, 20px, $dark-color, 25px, 400, italic, none, none); }
-.tag { @include paragraph-style($sans-serif, 12px, $dark-color, 15px, 300, normal, none, none); }
+p,a { @include paragraph-style($sans-serif, 14px, $bk-color, 17px, 400, normal, none, none); }
+.excerpt { @include paragraph-style($serif, 20px, $bk-color, 25px, 400, italic, none, none); }
+.tag { @include paragraph-style($sans-serif, 12px, $bk-color, 15px, 300, normal, none, none); }
 
 
 /* 1. Body */
@@ -103,9 +105,9 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 3vw;
+	// height: 3vw;
 	width: $central-block-width; 
-	padding: 0 $general-padding;
+	padding: 10px $general-padding;
 	.header__navigation__list__item{
 		padding-left: 20px;
 	}	
@@ -146,6 +148,7 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 	justify-content: center;
 	align-items: flex-start;
 	margin-bottom: 20px;
+
 }
 
 .row--padding{
@@ -161,10 +164,7 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 	overflow: hidden;
 }
 
-.large-6{
-	width: 50%;
-	// background-color: lightblue;
-}
+
 
 .main__excerpt-project{
 	figure{
@@ -201,7 +201,7 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 }
 
 .cta-plus{
-	color: $dark-color;
+	color: $bk-color;
 	font-size: 40px;
 	font-weight: 300;
 	font-family: $sans-serif;
@@ -239,6 +239,7 @@ p,a { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal
 	svg{
 		height: 50px;
 		width: 50px;
+		fill: $bk-color;
 	}
 }
 
