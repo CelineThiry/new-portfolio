@@ -76,16 +76,20 @@ $general-padding: 0px;
 	text-transform: $uppercase;
 }
 
-h1 { @include paragraph-style($serif, 36px, $bk-color, 45px, 400, italic, none, none); }
-h2 { @include paragraph-style($sans-serif, 18px, $bk-color, 22px, bold, normal, none, uppercase); }
-.links { @include paragraph-style($sans-serif, 14px, $dark-color, 17px, 400, normal, none, none); }
+h1 { @include paragraph-style($serif, 180%, $bk-color, 140%, 400, italic, none, none); }
+h2 { @include paragraph-style($sans-serif, 110%, $bk-color, 140%, bold, normal, none, uppercase); }
+.links { @include paragraph-style($sans-serif, 90%, $dark-color, 140%, 400, normal, none, none); }
 .links:hover{text-decoration: underline;}
-p,a { @include paragraph-style($sans-serif, 14px, $bk-color, 17px, 400, normal, none, none); }
-.excerpt { @include paragraph-style($serif, 20px, $bk-color, 25px, 400, italic, none, none); }
-.tag { @include paragraph-style($sans-serif, 12px, $bk-color, 15px, 300, normal, none, none); }
+p,a { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 400, normal, none, none); }
+.excerpt { @include paragraph-style($serif, 150%, $bk-color, 140%, 300, italic, none, none); }
+.tag { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 300, normal, none, none); }
 
 
 /* 1. Body */
+body{
+	font-size: 16px;
+	line-height: 140%;
+}
 
 .body-container{
 	display: block;

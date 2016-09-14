@@ -5,6 +5,7 @@ function isWideScreen() {
 	return width >= 690;
 }
 
+var figureHeight = $('figure').css('height');
 
 function resizeContentForWideScreens() {
 	console.log('resizeContentForWideScreens');
@@ -13,7 +14,7 @@ function resizeContentForWideScreens() {
     $('.header').css('height',marginLeftOfBodyContainer);
     $('.body-container').css('margin-top',marginLeftOfBodyContainer).css('margin-bottom',marginLeftOfBodyContainer);  
 
-    var figureHeight = $('figure').css('height');
+    
     $('.main__intro-block').css('height',figureHeight);
     $('.button-block').css('height',figureHeight); 
 }
@@ -22,6 +23,9 @@ function resizeContentForSmallScreens() {
 	console.log('resizeContentForSmallScreens');
 	var headerHeight = $('.header').css('height');
 	$('.body-container').css('margin-top',headerHeight).css('margin-bottom',headerHeight); 	
+
+	$('.button-block').css('height',figureHeight); 
+	$('figure').css('height',figureHeight); 
 }
 
 function resizeContent() {
