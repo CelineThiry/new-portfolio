@@ -168,6 +168,25 @@ body{
 	overflow: hidden;
 }
 
+/* Mixin transition */
+@mixin general-transition($property, $duration, $timing-fn) {
+	transition-duration: $duration;
+	transition-property: $property;
+	transition-timing-function: $timing-fn;
+	-o-transition-duration: $duration;
+	-o-transition-property: $property;
+	-o-transition-timing-function: $timing-fn;
+	-ms-transition-duration: $duration;
+	-ms-transition-property: $property;
+	-ms-transition-timing-function: $timing-fn;
+	-moz-transition-duration: $duration;
+	-moz-transition-property: $property;
+	-moz-transition-timing-function: $timing-fn;
+	-webkit-transition-duration: $duration;
+	-webkit-transition-property: $property;
+	-webkit-transition-timing-function: $timing-fn;
+}
+
 
 
 .main__excerpt-project{
@@ -176,8 +195,14 @@ body{
 		position: relative;
 		overflow: hidden;
 		cursor: pointer;
-		&:hover .caption-hover{
+		.caption-hover{
 			display: flex;
+			opacity: 0;
+			@include general-transition(opacity, .25s, ease-in);
+		}
+		&:hover .caption-hover{			
+			opacity: 1;
+			@include general-transition(opacity, .40s, ease-out);
 		}
 
 		img{
@@ -244,6 +269,11 @@ body{
 		height: 50px;
 		width: 50px;
 		fill: $bk-color;
+		@include general-transition(fill, .25s, ease-in);
+		&:hover{
+			fill: $dark-color;
+			@include general-transition(fill, .40s, ease-out);
+		}
 	}
 }
 

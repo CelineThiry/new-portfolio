@@ -573,12 +573,46 @@ body {
   padding: 0px;
   overflow: hidden; }
 
+/* Mixin transition */
 .main__excerpt-project figure {
   position: relative;
   overflow: hidden;
   cursor: pointer; }
+  .main__excerpt-project figure .caption-hover {
+    display: flex;
+    opacity: 0;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    -o-transition-duration: 0.25s;
+    -o-transition-property: opacity;
+    -o-transition-timing-function: ease-in;
+    -ms-transition-duration: 0.25s;
+    -ms-transition-property: opacity;
+    -ms-transition-timing-function: ease-in;
+    -moz-transition-duration: 0.25s;
+    -moz-transition-property: opacity;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-duration: 0.25s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-timing-function: ease-in; }
   .main__excerpt-project figure:hover .caption-hover {
-    display: flex; }
+    opacity: 1;
+    transition-duration: 0.4s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    -o-transition-duration: 0.4s;
+    -o-transition-property: opacity;
+    -o-transition-timing-function: ease-out;
+    -ms-transition-duration: 0.4s;
+    -ms-transition-property: opacity;
+    -ms-transition-timing-function: ease-out;
+    -moz-transition-duration: 0.4s;
+    -moz-transition-property: opacity;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-property: opacity;
+    -webkit-transition-timing-function: ease-out; }
   .main__excerpt-project figure img {
     width: 100%; }
 
@@ -628,7 +662,39 @@ body {
   .footer__right__list__item svg {
     height: 50px;
     width: 50px;
-    fill: #ffffff; }
+    fill: #ffffff;
+    transition-duration: 0.25s;
+    transition-property: fill;
+    transition-timing-function: ease-in;
+    -o-transition-duration: 0.25s;
+    -o-transition-property: fill;
+    -o-transition-timing-function: ease-in;
+    -ms-transition-duration: 0.25s;
+    -ms-transition-property: fill;
+    -ms-transition-timing-function: ease-in;
+    -moz-transition-duration: 0.25s;
+    -moz-transition-property: fill;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-duration: 0.25s;
+    -webkit-transition-property: fill;
+    -webkit-transition-timing-function: ease-in; }
+    .footer__right__list__item svg:hover {
+      fill: #4A4A4A;
+      transition-duration: 0.4s;
+      transition-property: fill;
+      transition-timing-function: ease-out;
+      -o-transition-duration: 0.4s;
+      -o-transition-property: fill;
+      -o-transition-timing-function: ease-out;
+      -ms-transition-duration: 0.4s;
+      -ms-transition-property: fill;
+      -ms-transition-timing-function: ease-out;
+      -moz-transition-duration: 0.4s;
+      -moz-transition-property: fill;
+      -moz-transition-timing-function: ease-out;
+      -webkit-transition-duration: 0.4s;
+      -webkit-transition-property: fill;
+      -webkit-transition-timing-function: ease-out; }
 
 footer.row {
   justify-content: center;
