@@ -1,7 +1,10 @@
 @media screen and (max-width: 550px){
-	.row{
-		flex-wrap: wrap;
-	}
+	.row {flex-wrap: wrap;}
+
+	footer.row {justify-content: space-between;}
+
+	.footer__right__list {margin-top: 20px;}
+	footer.row p.tag{margin-top: 0;}
 }
 
 

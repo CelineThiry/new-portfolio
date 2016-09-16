@@ -62,6 +62,35 @@ $central-block-width: 90vw;
 
 $general-padding: 0px;
 
+/* MIXIN */
+
+/* Mixin transition */
+@mixin general-transition($property, $duration, $timing-fn) {
+	transition-duration: $duration;
+	transition-property: $property;
+	transition-timing-function: $timing-fn;
+	-o-transition-duration: $duration;
+	-o-transition-property: $property;
+	-o-transition-timing-function: $timing-fn;
+	-ms-transition-duration: $duration;
+	-ms-transition-property: $property;
+	-ms-transition-timing-function: $timing-fn;
+	-moz-transition-duration: $duration;
+	-moz-transition-property: $property;
+	-moz-transition-timing-function: $timing-fn;
+	-webkit-transition-duration: $duration;
+	-webkit-transition-property: $property;
+	-webkit-transition-timing-function: $timing-fn;
+}
+
+@mixin transform-kit($transfo){
+	-webkit-transform: $transfo;
+	   -moz-transform: $transfo;
+	    -ms-transform: $transfo;
+	     -o-transform: $transfo;
+	        transform: $transfo;
+}
+
 
 /* Typeface style */
 
@@ -78,8 +107,20 @@ $general-padding: 0px;
 
 h1 { @include paragraph-style($serif, 180%, $bk-color, 140%, 400, italic, none, none); }
 h2 { @include paragraph-style($sans-serif, 110%, $bk-color, 140%, bold, normal, none, uppercase); }
-.links { @include paragraph-style($sans-serif, 90%, $dark-color, 140%, 400, normal, none, none); }
-.links:hover{text-decoration: underline;}
+.links { position: relative; @include paragraph-style($sans-serif, 90%, $dark-color, 140%, 400, normal, none, none);}
+.links:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 1px;
+	  bottom: -2px;
+	  left: 0;
+	  background-color: $dark-color;
+	  visibility: hidden;
+	  @include transform-kit(scaleX(0));
+	  @include general-transition(all, .25s, ease-in);
+}
+.links:hover:before{visibility: visible; @include transform-kit(scaleX(1)); @include general-transition(all, .40s, ease-out);}
 p,a { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 400, normal, none, none); }
 .excerpt { @include paragraph-style($serif, 150%, $bk-color, 140%, 300, italic, none, none); }
 .tag { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 300, normal, none, none); }
@@ -168,24 +209,7 @@ body{
 	overflow: hidden;
 }
 
-/* Mixin transition */
-@mixin general-transition($property, $duration, $timing-fn) {
-	transition-duration: $duration;
-	transition-property: $property;
-	transition-timing-function: $timing-fn;
-	-o-transition-duration: $duration;
-	-o-transition-property: $property;
-	-o-transition-timing-function: $timing-fn;
-	-ms-transition-duration: $duration;
-	-ms-transition-property: $property;
-	-ms-transition-timing-function: $timing-fn;
-	-moz-transition-duration: $duration;
-	-moz-transition-property: $property;
-	-moz-transition-timing-function: $timing-fn;
-	-webkit-transition-duration: $duration;
-	-webkit-transition-property: $property;
-	-webkit-transition-timing-function: $timing-fn;
-}
+
 
 
 
@@ -229,11 +253,18 @@ body{
     }
 }
 
+
+
 .cta-plus{
 	color: $bk-color;
 	font-size: 40px;
 	font-weight: 300;
 	font-family: $sans-serif;
+	@include general-transition(transform, .40s, ease-out);
+	&:hover{
+		@include transform-kit(rotate(180deg));
+		@include general-transition(transform, .25s, ease-in);
+	}
 
 }
 
@@ -245,12 +276,28 @@ body{
 	flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 
 .large-block__button{
 	text-align: center;	
+	
+	&:hover a{
+			@include general-transition(font-weight, .25s, ease-in);
+    		font-weight: bold;
+    }
+    .cta-plus{
+    	@include general-transition(transform, .40s, ease-out);
+    }
+	&:hover .cta-plus{
+		@include transform-kit(rotate(180deg));
+		@include general-transition(transform, .25s, ease-in);
+	}
+	
     a{
+    	@include general-transition(font-weight, .40s, ease-out);
+    	font-weight: 300;
     	display: block;
     	margin-bottom: 10px;
     }
@@ -271,14 +318,14 @@ body{
 		fill: $bk-color;
 		@include general-transition(fill, .25s, ease-in);
 		&:hover{
-			fill: $dark-color;
+			fill: $color-block-3;
 			@include general-transition(fill, .40s, ease-out);
 		}
 	}
 }
 
 footer.row{
-	justify-content: center;
+	justify-content: space-between;
     align-items: flex-start;
     background-color: $color-block-1;
     padding: 20px;
