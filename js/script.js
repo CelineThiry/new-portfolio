@@ -2,13 +2,13 @@
 function isWideScreen() {
 	// retourne le résultat, qui peut être utilisé par le code qui appelle la fonction.
 	var width = parseFloat($(".main__intro-block").css("width"));
-	return width >= 690 & width < 1280;
+	return width >= 690 && width < 1290;
 }
 
 function isSuperWideScreen() {
 	// retourne le résultat, qui peut être utilisé par le code qui appelle la fonction.
 	var width = parseFloat($(".main__intro-block").css("width"));
-	return width >= 1280;
+	return width >= 1290;
 }
 
 var figureHeight = $('figure').css('height');
