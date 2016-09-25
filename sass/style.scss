@@ -105,8 +105,8 @@ $general-padding: 0px;
 	text-transform: $uppercase;
 }
 
-h1 { @include paragraph-style($serif, 180%, $bk-color, 140%, 400, italic, none, none); }
-h2 { @include paragraph-style($sans-serif, 110%, $bk-color, 140%, bold, normal, none, uppercase); }
+h1 { @include paragraph-style($serif, 200%, $bk-color, 140%, 400, italic, none, none); }
+h2, .h2 { @include paragraph-style($sans-serif, 110%, $bk-color, 140%, bold, normal, none, uppercase); }
 
 .links { position: relative; @include paragraph-style($sans-serif, 90%, $dark-color, 140%, 400, normal, none, none);}
 .links--white{@include paragraph-style($sans-serif, 90%, $bk-color, 140%, 400, normal, none, none);}
@@ -134,11 +134,13 @@ h2 { @include paragraph-style($sans-serif, 110%, $bk-color, 140%, bold, normal, 
 	  @include transform-kit(scaleX(0));
 	  @include general-transition(all, .20s, ease-in);
 }
+.active:before{visibility: visible; @include transform-kit(scaleX(1)); @include general-transition(all, .40s, ease-out);}
 .links:hover:before{visibility: visible; @include transform-kit(scaleX(1)); @include general-transition(all, .40s, ease-out);}
 p,a { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 400, normal, none, none); }
 .excerpt { @include paragraph-style($serif, 150%, $bk-color, 140%, 300, italic, none, none); }
 .tag { @include paragraph-style($sans-serif, 90%, $bk-color, 140%, 300, normal, none, uppercase); }
-
+.font-style-company-school{@include paragraph-style($sans-serif, 110%, $bk-color, 160%, 300, normal, none, uppercase);}
+.font-style-description {@include paragraph-style($serif, 90%, $bk-color, 140%, 300, italic, none, none);}
 
 /* 1. Body */
 body{
@@ -181,6 +183,33 @@ body{
 	display: inline;
 }
 
+.side-nav{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+.side-nav__left, .side-nav__right{
+	position: absolute;
+	top: 40vh;
+	.links{
+		cursor: pointer;
+	}
+
+}
+
+.side-nav__left{
+	@include transform-kit(rotate(-90deg));
+	left: -2.7vw;
+
+}
+
+.side-nav__right{
+	@include transform-kit(rotate(-90deg));
+	right: 0;
+
+}
+
 
 
 /* main */
@@ -191,7 +220,7 @@ body{
 	align-items: flex-end;
 }
 .main__intro-block__right.column{
-	padding: 0 0 0 20px;
+	padding: 0 20px 0 20px;
 }
 
 .main__intro-block__right{
@@ -272,18 +301,18 @@ body{
 
 
 
-.cta-plus{
-	color: $bk-color;
-	font-size: 40px;
-	font-weight: 300;
-	font-family: $sans-serif;
-	@include general-transition(transform, .40s, ease-out);
-	&:hover{
-		@include transform-kit(rotate(180deg));
-		@include general-transition(transform, .25s, ease-in);
-	}
+// .cta-plus{
+// 	color: $bk-color;
+// 	font-size: 40px;
+// 	font-weight: 300;
+// 	font-family: $sans-serif;
+// 	@include general-transition(transform, .40s, ease-out);
+// 	&:hover{
+// 		@include transform-kit(rotate(180deg));
+// 		@include general-transition(transform, .25s, ease-in);
+// 	}
 
-}
+// }
 
 .button-block{
 	background-color: $color-block-2;
@@ -297,22 +326,44 @@ body{
 }
 
 
-.large-block__button{
-	text-align: center;	
-	
-	// &:hover a{
-	// 		@include general-transition(font-weight, .25s, ease-in);
- //    		font-weight: bold;
- //    }
+.large-block__button{text-align: center;}
+
+.grid{
+	display: flex;
+    justify-content: space-between;
+    padding: 20px;
     
-	
- //    a{
- //    	@include general-transition(font-weight, .40s, ease-out);
- //    	font-weight: 300;
- //    	display: block;
- //    	margin-bottom: 10px;
- //    }
 }
+
+.bio{
+	background-color: $color-block-3;
+	h1{margin: 0 0 40px 0;}
+	p{margin: 0 0 5px 0;}
+}
+
+.bio__content{margin-top: 5px;}
+
+.bio__content__by-year--2016, .bio__content__by-year--2015, .bio__content__by-year--2014{
+	position: relative;
+	margin-bottom: 50px;
+	li{
+		margin-bottom: 20px;
+	}
+}
+
+.bio__content__by-year--2016:before, .bio__content__by-year--2015:before, .bio__content__by-year--2014:before{
+	position: absolute;
+	top: 0;
+	left: -60px;
+	color: $bk-color;
+}
+
+.bio__content__by-year--2016:before{content: "2016";}
+
+.bio__content__by-year--2015:before{content: "2015";}
+
+.bio__content__by-year--2014:before{content: "2014";}
+
 
 
 /* footer */

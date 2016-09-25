@@ -5,12 +5,20 @@
 
 	.footer__right__list {margin-top: 20px;}
 	footer.row p.tag{margin-top: 0;}
+
+	ul.bio__content__by-year--2016:before, ul.bio__content__by-year--2015:before, ul.bio__content__by-year--2014:before{
+		top: -30px;
+		left: 0;
+	}
+	ul.bio__content__by-year--2016, ul.bio__content__by-year--2015, ul.bio__content__by-year--2014{
+	margin-bottom: 70px;
+	}
 }
 
 
 @media screen and (max-width: 768px) {
 	div.main__intro-block__right.column {
-    padding: 0px;
+    padding: 20px;
 	}
 	.small-12{
 		width: 100%;
@@ -21,9 +29,9 @@
 
 @media screen and (min-width: 850px) {
 	
-	.large-6{
-		width: 50%;
-	}
+	.large-6{width: 50%;}
+
+	.large-12{width: 100%}
 }
 
 @media screen and (min-width: 1280px) {
