@@ -33,7 +33,7 @@ function resizeContentForWideScreens() {
     $('.body-container').css('margin-top',marginLeftOfBodyContainer).css('margin-bottom',marginLeftOfBodyContainer);  
 
     
-    $('.main__intro-block').css('height',figureHeight);
+    // $('.main__intro-block').css('height',figureHeight);
     $('.button-block').css('height',figureHeight); 
 }
 
