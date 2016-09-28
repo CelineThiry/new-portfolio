@@ -21,8 +21,8 @@ function resizeContentForSuperWideScreens() {
     $('.body-container').css('margin-top',marginLeftOfBodyContainer).css('margin-bottom',marginLeftOfBodyContainer);  
 
     
-    $('.main__intro-block').css('height',figureHeight);
-    $('.button-block').css('height',figureHeight); 
+    // $('.main__intro-block').css('height',figureHeight);
+    // $('.button-block').css('height',figureHeight); 
 }
 
 function resizeContentForWideScreens() {
@@ -34,7 +34,7 @@ function resizeContentForWideScreens() {
 
     
     // $('.main__intro-block').css('height',figureHeight);
-    $('.button-block').css('height',figureHeight); 
+    // $('.button-block').css('height',figureHeight); 
 }
 
 function resizeContentForSmallScreens() {
@@ -42,8 +42,8 @@ function resizeContentForSmallScreens() {
 	var headerHeight = $('.header').css('height');
 	$('.body-container').css('margin-top',headerHeight).css('margin-bottom',headerHeight); 	
 
-	$('.button-block').css('height',figureHeight); 
-	$('figure').css('height',figureHeight); 
+	// $('.button-block').css('height',figureHeight); 
+	// $('figure').css('height',figureHeight); 
 }
 
 function resizeContent() {

@@ -53,7 +53,13 @@ $bk-color: #ffffff; /* (white) */
 $color-block-1: #F8A494; /* (Lightcoral) */
 $color-block-2: #64BBBB; /* (Turquoise) */
 $color-block-3: #FFCF8B; /* (Light Orange) */
+$color-block-4: #7BE6D2; /* (Clear blue) */
+$color-block-5: #827C70; /* (Warm dark grey) */
+$color-block-6: #CCBFAC; /* (Warm light grey) */
+$color-block-7: #ADF3B5; /* (light green) */
+
 $dark-color: #4A4A4A; /* (dark black) */
+
 
 $serif: "Merriweather", serif;
 $sans-serif: "Lato", sans-serif;
@@ -183,32 +189,33 @@ body{
 	display: inline;
 }
 
-.side-nav{
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-}
-
-.side-nav__left, .side-nav__right{
-	position: absolute;
-	top: 40vh;
-	.links{
-		cursor: pointer;
-	}
-
-}
-
+/* side nav */
 .side-nav__left{
-	@include transform-kit(rotate(-90deg));
-	left: -2.7vw;
+	position: fixed;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 25vw;
+	overflow: hidden;
 
+
+	img{
+		height: 100%;
+		-webkit-box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
+-moz-box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
+box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
+	}
+}
+.side-nav__left figure{
+	@include transform-kit(translateX(-90vw));
+	@include general-transition(all, .25s, ease-out);
 }
 
-.side-nav__right{
-	@include transform-kit(rotate(-90deg));
-	right: 0;
-
+.side-nav__left:hover figure{
+	@include transform-kit(translateX(-70vw));
+	@include general-transition(all, .25s, ease-in);
 }
+
 
 
 
@@ -337,7 +344,7 @@ body{
 }
 
 .bio{
-	background-color: $color-block-3;
+	background-color: $color-block-5;
 	h1{margin: 0 0 40px 0;}
 	p{margin: 0 0 5px 0;}
 }
@@ -381,7 +388,7 @@ body{
 		fill: $bk-color;
 		@include general-transition(fill, .25s, ease-in);
 		&:hover{
-			fill: $color-block-3;
+			fill: $color-block-1;
 			@include general-transition(fill, .40s, ease-out);
 		}
 	}
@@ -390,7 +397,7 @@ body{
 footer.row{
 	justify-content: space-between;
     align-items: flex-start;
-    background-color: $color-block-1;
+    background-color: $color-block-3;
     padding: 20px;
     // height: 50vh;
     .tag{
