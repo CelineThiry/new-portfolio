@@ -1,13 +1,13 @@
 //Function to the css rule
 function isWideScreen() {
 	// retourne le résultat, qui peut être utilisé par le code qui appelle la fonction.
-	var width = parseFloat($(".main__intro-block").css("width"));
+	var width = parseFloat($("body").css("width"));
 	return width >= 690 && width < 1290;
 }
 
 function isSuperWideScreen() {
 	// retourne le résultat, qui peut être utilisé par le code qui appelle la fonction.
-	var width = parseFloat($(".main__intro-block").css("width"));
+	var width = parseFloat($("body").css("width"));
 	return width >= 1290;
 }
 
@@ -66,4 +66,5 @@ $(document).ready(function(){
 
 $(window).on('resize', function(){
     resizeContent();
+    reload(); 
 });
