@@ -49,14 +49,15 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
 @import 'mediaqueries';
 
 
-$bk-color: #ffffff; /* (white) */
-$color-block-1: #F8A494; /* (Lightcoral) */
-$color-block-2: #64BBBB; /* (Turquoise) */
-$color-block-3: #FFCF8B; /* (Light Orange) */
-$color-block-4: #7BE6D2; /* (Clear blue) */
-$color-block-5: #827C70; /* (Warm dark grey) */
-$color-block-6: #CCBFAC; /* (Warm light grey) */
-$color-block-7: #ADF3B5; /* (light green) */
+$bk-color: #faf9ff; /* (white) */
+$color-block-1: #F8A494; /* (Lightcoral) #F8A494 */
+$color-block-2: #64BBBB; /* (Turquoise) #64BBBB */
+$color-block-3: #FFCF8B; /* (Light Orange) #FFCF8B */
+$color-block-4: #7BE6D2; /* (Clear blue) #7BE6D2 */
+$color-block-5: #827C70; /* (Warm dark grey) #827C70 */
+$color-block-6: #e6e5e1; /* (Warm light grey) #CCBFAC */
+$color-block-7: #ADF3B5; /* (light green) #ADF3B5 */
+$color-block-8: #1c5f65; /* (dark blue) #1c5f65 */
 
 $dark-color: #4A4A4A; /* (dark black) */
 
@@ -190,32 +191,31 @@ body{
 }
 
 /* side nav */
-.side-nav__left{
+.side-nav__left, .side-nav__right{
 	position: fixed;
+	top: 32vh;
 	z-index: 11;
-	top: 0;
-	left: 0;
-	width: 25vw;
-	overflow: hidden;
+}
 
+.side-nav__left{
+	left: 2vw;
+	@include transform-kit(rotate(90deg));
+	transform-origin: 0% 50%;
+}
 
-	img{
-		height: 100%;
-		-webkit-box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
--moz-box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
-box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
+.side-nav__right{
+	right: 2vw;
+	transform: rotate(-90deg);
+	transform-origin: 100% 50%;
+}
+
+.next-prev{
+	color: $dark-color;
+	text-align: center;
+	span{
+		color: $color-block-2;
 	}
 }
-.side-nav__left figure{
-	@include transform-kit(translateX(-90vw));
-	@include general-transition(all, .25s, ease-out);
-}
-
-.side-nav__left:hover figure{
-	@include transform-kit(translateX(-70vw));
-	@include general-transition(all, .25s, ease-in);
-}
-
 
 
 
@@ -344,7 +344,7 @@ box-shadow: 25px 30px 55px 0px rgba(0,0,0,0.29);
 }
 
 .bio{
-	background-color: $color-block-5;
+	background-color: $color-block-8;
 	h1{margin: 0 0 40px 0;}
 	p{margin: 0 0 5px 0;}
 }
