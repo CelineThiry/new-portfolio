@@ -59,12 +59,44 @@ function resizeContent() {
     }
 }
 
+//animation with walkway
+// function drawSvg() {
+    
+//     // $(".header__logo svg").on('mouseover', function(){
+        
+//         var svg4 = new Walkway({
+//           selector: '#logo-celine',
+//           duration: 900,
+//           easing: 'easeOut'
+//         });
+
+//         svg4.draw();  
+//     // });  
+
+// }
+
+//animation with vivus
+function playVivus() {
+    var myVivus = new Vivus('logo-celine', {type: 'scenario-sync', duration: 50, delay: 0, animTimingFunction: Vivus.EASE_OUT});
+    myVivus.play();
+}
+
+
 // Shorthand for $( document ).ready()
 $(document).ready(function(){
-    resizeContent();
+    resizeContent(); 
+    // drawSvg();
+    playVivus();   
 });
 
 $(window).on('resize', function(){
     resizeContent();
     reload(); 
 });
+
+
+
+
+
+
+ 

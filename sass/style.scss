@@ -186,6 +186,20 @@ body{
 	height: 25px;
 }
 
+path, line, polyline {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+path {
+	fill: none;
+}
+
+#logo-celine path, #logo-celine line {
+	stroke-width: 3px;
+	stroke: $dark-color;
+}
+
 .header__navigation__list__item{
 	display: inline;
 }
@@ -385,11 +399,10 @@ body{
 	svg{
 		height: 50px;
 		width: 50px;
-		fill: $bk-color;
-		@include general-transition(fill, .25s, ease-in);
+		path {stroke:none; stroke-width: 0;fill: $bk-color;@include general-transition(fill, .25s, ease-in);}
 		&:hover{
-			fill: $color-block-1;
-			@include general-transition(fill, .40s, ease-out);
+			path{stroke:none; stroke-width: 0;fill: $color-block-1;
+			@include general-transition(fill, .40s, ease-out);}
 		}
 	}
 }

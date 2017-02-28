@@ -702,6 +702,17 @@ body {
   width: 25px;
   height: 25px; }
 
+path, line, polyline {
+  stroke: #fff;
+  stroke-width: 1px; }
+
+path {
+  fill: none; }
+
+#logo-celine path, #logo-celine line {
+  stroke-width: 3px;
+  stroke: #4A4A4A; }
+
 .header__navigation__list__item {
   display: inline; }
 
@@ -880,24 +891,29 @@ body {
   display: inline; }
   .footer__right__list__item svg {
     height: 50px;
-    width: 50px;
-    fill: #faf9ff;
-    transition-duration: 0.25s;
-    transition-property: fill;
-    transition-timing-function: ease-in;
-    -o-transition-duration: 0.25s;
-    -o-transition-property: fill;
-    -o-transition-timing-function: ease-in;
-    -ms-transition-duration: 0.25s;
-    -ms-transition-property: fill;
-    -ms-transition-timing-function: ease-in;
-    -moz-transition-duration: 0.25s;
-    -moz-transition-property: fill;
-    -moz-transition-timing-function: ease-in;
-    -webkit-transition-duration: 0.25s;
-    -webkit-transition-property: fill;
-    -webkit-transition-timing-function: ease-in; }
-    .footer__right__list__item svg:hover {
+    width: 50px; }
+    .footer__right__list__item svg path {
+      stroke: none;
+      stroke-width: 0;
+      fill: #faf9ff;
+      transition-duration: 0.25s;
+      transition-property: fill;
+      transition-timing-function: ease-in;
+      -o-transition-duration: 0.25s;
+      -o-transition-property: fill;
+      -o-transition-timing-function: ease-in;
+      -ms-transition-duration: 0.25s;
+      -ms-transition-property: fill;
+      -ms-transition-timing-function: ease-in;
+      -moz-transition-duration: 0.25s;
+      -moz-transition-property: fill;
+      -moz-transition-timing-function: ease-in;
+      -webkit-transition-duration: 0.25s;
+      -webkit-transition-property: fill;
+      -webkit-transition-timing-function: ease-in; }
+    .footer__right__list__item svg:hover path {
+      stroke: none;
+      stroke-width: 0;
       fill: #F8A494;
       transition-duration: 0.4s;
       transition-property: fill;
