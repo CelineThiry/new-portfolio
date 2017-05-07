@@ -702,17 +702,19 @@ body {
   width: 25px;
   height: 25px; }
 
-path, line, polyline {
-  stroke: #fff;
-  stroke-width: 1px; }
+/* path, line, polyline {
+    stroke: #fff;
+    stroke-width: 1px;
+}
 
 path {
-  fill: none; }
+	fill: none;
+}
 
 #logo-celine path, #logo-celine line {
-  stroke-width: 3px;
-  stroke: #4A4A4A; }
-
+	stroke-width: 3px;
+	stroke: $dark-color;
+} */
 .header__navigation__list__item {
   display: inline; }
 
@@ -862,17 +864,20 @@ path {
 .bio__content {
   margin-top: 5px; }
 
-.bio__content__by-year--2016, .bio__content__by-year--2015, .bio__content__by-year--2014 {
+.bio__content__by-year--2017, .bio__content__by-year--2016, .bio__content__by-year--2015, .bio__content__by-year--2014, .bio__content__by-year--2011 {
   position: relative;
   margin-bottom: 50px; }
-  .bio__content__by-year--2016 li, .bio__content__by-year--2015 li, .bio__content__by-year--2014 li {
+  .bio__content__by-year--2017 li, .bio__content__by-year--2016 li, .bio__content__by-year--2015 li, .bio__content__by-year--2014 li, .bio__content__by-year--2011 li {
     margin-bottom: 20px; }
 
-.bio__content__by-year--2016:before, .bio__content__by-year--2015:before, .bio__content__by-year--2014:before {
+.bio__content__by-year--2017:before, .bio__content__by-year--2016:before, .bio__content__by-year--2015:before, .bio__content__by-year--2014:before, .bio__content__by-year--2011:before {
   position: absolute;
   top: 0;
   left: -60px;
   color: #faf9ff; }
+
+.bio__content__by-year--2017:before {
+  content: "2017"; }
 
 .bio__content__by-year--2016:before {
   content: "2016"; }
@@ -882,6 +887,9 @@ path {
 
 .bio__content__by-year--2014:before {
   content: "2014"; }
+
+.bio__content__by-year--2011:before {
+  content: "2011"; }
 
 /* footer */
 .footer__right__list {
